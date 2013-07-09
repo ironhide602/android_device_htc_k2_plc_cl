@@ -28,7 +28,7 @@
 -include device/htc/msm8960-common/BoardConfigCommon.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := k2cl
+TARGET_BOOTLOADER_BOARD_NAME := k2_plc_cl
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80400000
@@ -36,8 +36,8 @@ BOARD_KERNEL_PAGE_SIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81808000
 
-TARGET_PREBUILT_KERNEL := device/htc/k2cl/prebuilt/kernel
-TARGET_KERNEL_CONFIG := k2_cl_defconfig
+TARGET_PREBUILT_KERNEL := device/htc/k2_plc_cl/prebuilt/kernel
+TARGET_KERNEL_CONFIG := k2_plc_cl_defconfig
 
 # Use libril in the device tree
 BOARD_PROVIDES_LIBRIL := true
@@ -74,15 +74,14 @@ WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path
 #mmcblk0p22: 000ffa00 00000200 "misc"
 #mmcblk0p21: 00fffe00 00000200 "recovery"
 #mmcblk0p20: 01000000 00000200 "boot"
-#mmcblk0p35: 54fffc00 00000200 "system"
+#mmcblk0p33: 54fffc00 00000200 "system"
 #mmcblk0p29: 00140200 00000200 "local"
-#mmcblk0p36: 0dfffe00 00000200 "cache"
-#mmcblk0p37: 49fffe00 00000200 "userdata"
+#mmcblk0p34: 0dfffe00 00000200 "cache"
+#mmcblk0p35: 49fffe00 00000200 "userdata"
 #mmcblk0p25: 01400000 00000200 "devlog"
 #mmcblk0p27: 00040000 00000200 "pdata"
-#mmcblk0p38: 1097fe000 00000200 "fat"
+#mmcblk0p36: 1097fe000 00000200 "fat"
 #mmcblk0p30: 00010000 00000200 "extra"
-#mmcblk0p32: 01900000 00000200 "carrier"
 #mmcblk0p16: 02d00000 00000200 "radio"
 #mmcblk0p17: 00a00000 00000200 "adsp"
 #mmcblk0p15: 00100000 00000200 "dsps"
@@ -90,8 +89,8 @@ WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path
 #mmcblk0p19: 007ffa00 00000200 "radio_config"
 #mmcblk0p23: 00400000 00000200 "modem_st1"
 #mmcblk0p24: 00400000 00000200 "modem_st2"
-#mmcblk0p31: 00040000 00000200 "skylink"
-#mmcblk0p33: 00100000 00000200 "cdma_record"
+#mmcblk0p31: 00100000 00000200 "cdma_record"
+#mmcblk0p32: 06069e00 00000200 "reserve"
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
